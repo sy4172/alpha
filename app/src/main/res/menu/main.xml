@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/logOut"
+        android:icon="@drawable/exit"
+        app:showAsAction="always"
+        android:title="log out"/>
+    <item
+        android:id="@+id/calander"
+        android:title="Calander" />
+    <item
+        android:id="@+id/map"
+        android:title="Map" />
+    <item
+        android:id="@+id/record"
+        android:title="Record" />
+    <item
+        android:id="@+id/pdf"
+        android:title="PDF" />
+</menu>
