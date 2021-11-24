@@ -58,6 +58,8 @@ public class LoginActivity extends AppCompatActivity {
         SharedPreferences settings = getSharedPreferences("Status",MODE_PRIVATE);
         boolean toSkip = settings.getBoolean("stayConnect",false);
 
+        currentUser = mAuth.getCurrentUser();
+
         if (toSkip && (currentUser != null)){
             Variable.setEmailVer(emailET.getText().toString());
             Intent si = new Intent(this, MainActivity.class);
