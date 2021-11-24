@@ -346,6 +346,7 @@ public class RecordActivity extends AppCompatActivity implements View.OnCreateCo
                 SharedPreferences settings = getSharedPreferences("Status",MODE_PRIVATE);
                 SharedPreferences.Editor editor = settings.edit();
                 editor.putString("email", "");
+                editor.putBoolean("stayConnect",false);
                 editor.apply();
 
                 startActivity(si);

@@ -3,6 +3,7 @@ package com.example.alpha;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -24,7 +25,7 @@ import java.util.Objects;
 public class LoginActivity extends AppCompatActivity {
 
     EditText emailET, passwordET;
-    CheckBox checkBN;
+    CheckBox checkBox;
 
     FirebaseAuth mAuth;
     FirebaseUser currentUser;
@@ -39,7 +40,7 @@ public class LoginActivity extends AppCompatActivity {
 
         emailET = findViewById(R.id.emailET);
         passwordET = findViewById(R.id.passwordET);
-        checkBN = findViewById(R.id.checkBN);
+        checkBox = findViewById(R.id.checkBox);
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -157,10 +158,11 @@ public class LoginActivity extends AppCompatActivity {
         currentUser = user;
     }
 
+    @SuppressLint("ApplySharedPref")
     public void changeConnection(View view) {
         SharedPreferences settings = getSharedPreferences("Status",MODE_PRIVATE);
         SharedPreferences.Editor editor = settings.edit();
-        editor.putBoolean("stayConnect",checkBN.isChecked());
-        editor.apply();
+        editor.putBoolean("stayConnect",checkBox.isChecked());
+        editor.commit();
     }
 }

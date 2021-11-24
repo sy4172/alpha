@@ -163,6 +163,7 @@ public class LocationActivity extends AppCompatActivity implements OnMapReadyCal
                 SharedPreferences settings = getSharedPreferences("Status",MODE_PRIVATE);
                 SharedPreferences.Editor editor = settings.edit();
                 editor.putString("email", "");
+                editor.putBoolean("stayConnect",false);
                 editor.apply();
 
                 startActivity(si);
