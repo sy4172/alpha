@@ -68,7 +68,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0px"
-            android:layout_weight="2"
+            android:layout_weight="3"
             android:orientation="horizontal">
 
             <Space
@@ -76,15 +76,13 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1" />
 
-            <CheckBox
-                android:id="@+id/checkBN"
+            <Button
                 android:layout_width="0px"
                 android:layout_height="match_parent"
-                android:layout_weight="4"
-                android:onClick="changeConnection"
-                android:text="Stay connect"
-                android:textAlignment="center"
-                android:textSize="16sp" />
+                android:layout_weight="3"
+                android:onClick="createUser"
+                android:backgroundTint="@color/cardview_dark_background"
+                android:text="Create user" />
 
             <Space
                 android:layout_width="0px"
@@ -96,9 +94,41 @@
                 android:layout_width="0px"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
-                android:onClick="login"
                 android:backgroundTint="@color/cardview_dark_background"
+                android:onClick="login"
                 android:text="Login" />
+
+            <Space
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="3"
+            android:orientation="horizontal">
+
+            <Space
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <CheckBox
+                android:id="@+id/checkBN"
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:onClick="changeConnection"
+                android:text="Stay connect"
+                android:textAlignment="center"
+                android:textSize="16sp" />
 
             <Space
                 android:layout_width="0px"

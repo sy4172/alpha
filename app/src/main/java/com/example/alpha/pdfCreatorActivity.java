@@ -348,9 +348,9 @@ public class pdfCreatorActivity extends AppCompatActivity implements View.OnCrea
             si = new Intent(this, RecordActivity.class);
             startActivity(si);
         }
-//        else if (id == R.id.map){
-//            si = new Intent(this, )
-//        }
+        else if (id == R.id.map){
+            si = new Intent(this, LocationActivity.class);
+        }
 
 
         return super.onOptionsItemSelected(item);
