@@ -150,9 +150,6 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
-    private void signIn() {
-
-    }
 
     private void updateUI(FirebaseUser user) {
         currentUser = user;
